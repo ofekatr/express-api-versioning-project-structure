@@ -7,9 +7,9 @@ const apiRoutersMap = new Map([
   ["v2", apiV2Router],
 ]);
 
-const apiRouter = Router();
+const ApiRouter = Router();
 apiRoutersMap.forEach((value, key) => {
-  apiRouter.use(`/${key}`, value);
+  ApiRouter.use(`/${key}`, value);
 });
 
-export default apiRouter;
+export default ApiRouter;

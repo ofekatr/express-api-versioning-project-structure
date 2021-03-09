@@ -27,7 +27,7 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@services/*": ["src/services/*"],
+      "@services/*":["src/services/*"],
       "@routes/*":["src/routes/*"],
       "@controllers/*":["src/controllers/*"],
       "@api/*":["resources/api/*"]
@@ -38,6 +38,9 @@
   ],
   "include": [
     "./src/**/*.tsx",
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "./resources/**/*.tsx",
+    "./resources/**/*.ts",
+    "./app.ts",
   ]
 }
