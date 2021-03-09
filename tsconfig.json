@@ -31,6 +31,7 @@
       "@routers/*":["src/routers/*"],
       "@controllers/*":["src/controllers/*"],
       "@configs/*":["src/configs/*"],
+      "@middlewares/*":["src/middlewares/*"],
       "@api/*":["src/api/*"]
     }
   },
