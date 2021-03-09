@@ -11,10 +11,11 @@ const apiRoutersMap = new Map([
 
 const ApiRouter = Router();
 
-ServerConfig["api-versions"].forEach((version) => {
-  const router = apiRoutersMap.get(version)?.router;
+ServerConfig["api"].versions.forEach((version) => {
+  const key = `v${version}`;
+  const router = apiRoutersMap.get(key)?.router;
   if (router) {
-    ApiRouter.use(`/${version}`, router);
+    ApiRouter.use(`/${key}`, router);
   }
 })
 
