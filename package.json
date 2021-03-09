@@ -16,6 +16,7 @@
     "@services": "dist/src/services",
     "@routers": "dist/src/routers",
     "@controllers": "dist/src/controllers",
+    "@configs": "dist/src/configs",
     "@api": "dist/src/api"
   },
   "devDependencies": {

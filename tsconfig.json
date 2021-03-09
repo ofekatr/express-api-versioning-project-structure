@@ -30,6 +30,7 @@
       "@services/*":["src/services/*"],
       "@routers/*":["src/routers/*"],
       "@controllers/*":["src/controllers/*"],
+      "@configs/*":["src/configs/*"],
       "@api/*":["src/api/*"]
     }
   },

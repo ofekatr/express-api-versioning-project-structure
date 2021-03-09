@@ -1,17 +1,22 @@
 import { Router } from "express";
-import apiV1Router from "./1/routes/api-v1.router";
-import apiV2Router from "./2/routes/api-v2.router";
+
+import ApiV1Router from "./1/routes/api-v1.router";
+import ApiV2Router from "./2/routes/api-v2.router";
+import ServerConfig from "@configs/server.json";
 
 const apiRoutersMap = new Map([
-  ["v1", { enabled: true, router: apiV1Router }],
-  ["v2", { enabled: true, router: apiV2Router }],
+  ["v1", { router: ApiV1Router }],
+  ["v2", { router: ApiV2Router }],
 ]);
 
 const ApiRouter = Router();
-apiRoutersMap.forEach(({ enabled, router }, key) => {
-  if (enabled) {
-    ApiRouter.use(`/${key}`, router);
+
+ServerConfig["api-versions"].forEach((version) => {
+  const router = apiRoutersMap.get(version)?.router;
+  if (router) {
+    ApiRouter.use(`/${version}`, router);
   }
-});
+})
+
 
 export default ApiRouter;

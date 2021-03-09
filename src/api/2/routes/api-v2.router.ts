@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-const apiV2Router = Router();
+const ApiV2Router = Router();
 
-apiV2Router.get("/", (_, res) => {
+ApiV2Router.get("/", (_, res) => {
   res.send("v2");
 });
 
-export default apiV2Router;
+export default ApiV2Router;
