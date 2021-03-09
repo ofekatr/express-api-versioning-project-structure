@@ -28,9 +28,9 @@
     "baseUrl": ".",
     "paths": {
       "@services/*":["src/services/*"],
-      "@routes/*":["src/routes/*"],
+      "@routers/*":["src/routers/*"],
       "@controllers/*":["src/controllers/*"],
-      "@api/*":["resources/api/*"]
+      "@api/*":["src/api/*"]
     }
   },
   "exclude": [
@@ -39,8 +39,6 @@
   "include": [
     "./src/**/*.tsx",
     "./src/**/*.ts",
-    "./resources/**/*.tsx",
-    "./resources/**/*.ts",
     "./app.ts",
   ]
 }

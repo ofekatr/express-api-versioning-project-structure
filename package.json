@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app",
-    "compile":"tsc",
+    "compile": "tsc",
     "compile_start": "tsc && node dist/app",
     "dev": "ts-node-dev app"
   },
@@ -13,13 +13,14 @@
   "author": "",
   "license": "ISC",
   "_moduleAliases": {
-    "@services":"dist/src/services",
-    "@routes":"dist/src/routes",
-    "@controllers":"dist/src/controllers",
-    "@api":"dist/resources/api"
+    "@services": "dist/src/services",
+    "@routers": "dist/src/routers",
+    "@controllers": "dist/src/controllers",
+    "@api": "dist/src/api"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
+    "dotenv": "^8.2.0",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3"
   },
