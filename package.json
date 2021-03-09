@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app",
+    "compile":"tsc",
     "compile_start": "tsc && node dist/app",
     "dev": "ts-node-dev app"
   },

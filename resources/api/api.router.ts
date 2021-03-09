@@ -3,13 +3,15 @@ import apiV1Router from "./1/routes/api-v1.router";
 import apiV2Router from "./2/routes/api-v2.router";
 
 const apiRoutersMap = new Map([
-  ["v1", apiV1Router],
-  ["v2", apiV2Router],
+  ["v1", { enabled: true, router: apiV1Router }],
+  ["v2", { enabled: true, router: apiV2Router }],
 ]);
 
 const ApiRouter = Router();
-apiRoutersMap.forEach((value, key) => {
-  ApiRouter.use(`/${key}`, value);
+apiRoutersMap.forEach(({ enabled, router }, key) => {
+  if (enabled) {
+    ApiRouter.use(`/${key}`, router);
+  }
 });
 
 export default ApiRouter;
